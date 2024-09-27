@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300..700&display=swap");
+
+:root {
+  --font-family: "Lora", serif;
+  --color-primary: #fafafa;
+  --color-secondary: #377f3d;
+  --color-button-primary: #6bbf59;
+  --color-button-secondary: #7dcfb6;
+  --color-accents: #ffd700;
+  --color-text: #333333;
+  --color-text-light: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  background-color: var(--color-secondary);
+  border-radius: 50px;
+  /* position: sticky;
+  top: 0; */
+}
+
+.logo img {
+  height: 90px;
+  object-fit: contain;
+}
+
+nav ul {
+  padding: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 15px;
+  cursor: pointer;
+  align-items: center;
+  color: var(--color-primary);
+}
+
+.hero-section {
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.hero-section h1 {
+  color: var(--color-secondary);
+  text-align: center;
+}
+
+.hero-section h2 {
+  text-align: center;
+}
+
+.hero-section ul {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section ul li button {
+  height: 40px;
+  width: 120px;
+  cursor: pointer;
+}
+
+.btn-1 {
+  background-color: var(--color-button-primary);
+  color: var(--color-text-light);
+}
+
+.btn-2 {
+  background-color: var(--color-button-secondary);
+  color: var(--color-text);
+}
+
+.features {
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-body {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+
+.icon {
+  align-items: center;
+}
+
+.feature-btn {
+  background-color: var(--color-button-primary);
+  color: var(--color-text-light);
+  height: 40px;
+  width: 120px;
+  cursor: pointer;
+}
+
+.testimonials {
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.test-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.test {
+  height: 300px;
+  width: 300px;
+}
+
+.benefits {
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.all-icons {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.price {
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.plans {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.accordion {
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
