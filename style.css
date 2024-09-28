@@ -9,6 +9,7 @@
   --color-accents: #ffd700;
   --color-text: #333333;
   --color-text-light: #ffffff;
+  --heading-size: 45px;
 }
 
 * {
@@ -54,19 +55,25 @@ nav ul {
   cursor: pointer;
   align-items: center;
   color: var(--color-primary);
+  font-size: 24px;
 }
 
 .hero-section {
   padding: 20px;
-  margin: 20px;
+  margin: 40px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
 }
 
 .hero-section h1 {
+  font-size: 80px;
   color: var(--color-secondary);
   text-align: center;
+}
+
+.highlight-text {
+  font-style: italic;
 }
 
 .hero-section h2 {
@@ -82,8 +89,14 @@ nav ul {
 
 .hero-section ul li button {
   height: 40px;
-  width: 120px;
+  width: 200px;
   cursor: pointer;
+  font-size: 25px;
+}
+
+.hero-section ul li button:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
 }
 
 .btn-1 {
@@ -98,51 +111,105 @@ nav ul {
 
 .features {
   padding: 20px;
-  margin: 20px;
+  margin: 40px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
   justify-content: center;
   align-items: center;
+}
+
+.features h2 {
+  font-size: var(--heading-size);
 }
 
 .feature-body {
   display: flex;
   justify-content: space-evenly;
   gap: 40px;
+  align-items: center;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .icon {
-  align-items: center;
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  font-size: 25px;
+}
+
+.feature p {
+  font-size: 18px;
 }
 
 .feature-btn {
   background-color: var(--color-button-primary);
   color: var(--color-text-light);
   height: 40px;
-  width: 120px;
+  width: 200px;
   cursor: pointer;
+  font-size: 25px;
+}
+
+.feature-btn:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
 }
 
 .testimonials {
   padding: 20px;
-  margin: 20px;
+  margin: 40px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
   justify-content: center;
   align-items: center;
+}
+
+.testimonials h2 {
+  font-size: var(--heading-size);
 }
 
 .test-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px;
 }
 
 .test {
-  height: 300px;
+  height: 240px;
   width: 300px;
+  border: 1px solid var(--color-text);
+  text-align: center;
+  border-bottom: 4px solid var(--color-text);
+  border-radius: 10px;
+  background-color: var(--color-button-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.test p {
+  color: var(--color-text-light);
+}
+
+.review-img {
+  height: 140px;
+  width: 240px;
+  object-fit: contain;
 }
 
 .benefits {
@@ -155,9 +222,13 @@ nav ul {
   align-items: center;
 }
 
+.benefits h2 {
+  font-size: 40px;
+}
+
 .all-icons {
   display: flex;
-  gap: 30px;
+  gap: 50px;
   flex-wrap: wrap;
 }
 
@@ -166,6 +237,13 @@ nav ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.icon img {
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
 }
 
 .price {
@@ -178,6 +256,10 @@ nav ul {
   align-items: center;
 }
 
+.price h2 {
+  font-size: 40px;
+}
+
 .plans {
   display: flex;
   align-items: center;
@@ -185,11 +267,37 @@ nav ul {
   gap: 30px;
 }
 
-.section {
+.plan {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  height: 440px;
+  width: 200px;
+  border: 1px solid var(--color-text);
+}
+
+.lead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.lead h2 {
+  font-size: 40px;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.faq h2 {
+  font-size: 40px;
 }
 
 .accordion {
@@ -200,16 +308,35 @@ nav ul {
   border: none;
   outline: none;
   transition: 0.4s;
+  background-color: transparent;
+  border: 1px solid var(--color-text);
 }
 
 .active,
 .accordion:hover {
-  background-color: #ccc;
+  background-color: var(--color-button-secondary);
 }
 
 .panel {
   padding: 0 18px;
-  background-color: white;
+  background-color: var(--color-button-secondary);
   display: none;
   overflow: hidden;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.float {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
 }
