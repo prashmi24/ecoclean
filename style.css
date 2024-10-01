@@ -39,8 +39,6 @@ body {
   margin: 20px;
   background-color: var(--color-secondary);
   border-radius: 10px;
-  position: sticky;
-  top: 0;
 }
 
 .logo {
@@ -166,6 +164,7 @@ nav ul {
   width: 200px;
   cursor: pointer;
   font-size: 25px;
+  border-radius: 10px;
 }
 
 .feature-btn:hover {
@@ -214,20 +213,19 @@ nav ul {
 }
 
 .review-img {
-  height: 120px;
+  height: 100px;
   width: 240px;
   object-fit: contain;
 }
 
 .benefits {
   padding: 20px;
-  margin: 40px;
+  margin: 150px;
   display: flex;
   flex-direction: column;
   gap: 50px;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-secondary);
 }
 
 .benefits h2 {
@@ -256,13 +254,12 @@ nav ul {
 
 .price {
   padding: 20px;
-  margin: 40px;
+  margin: 150px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-button-secondary);
 }
 
 .price h2 {
@@ -277,79 +274,247 @@ nav ul {
 }
 
 .plan {
+  width: 15rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  border-bottom: 4px solid var(--color-text);
+  box-shadow: 0 6px 30px rgba(207, 212, 222, 0.3);
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+
+.plan h3 {
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.plan p {
+  display: block;
+  margin-top: -4px;
+  color: #4d4d4d;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.etiquet-price {
+  position: relative;
+  background: var(--color-accents);
+  width: 14.46rem;
+  margin-left: -0.65rem;
+  padding: 0.2rem 1.2rem;
+  border-radius: 5px 0 0 5px;
+  margin-bottom: 14px;
+}
+
+.etiquet-price p {
+  margin: 0;
+  padding-top: 0.4rem;
+  display: flex;
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.etiquet-price p:before {
+  content: "$";
+  margin-right: 5px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.etiquet-price p:after {
+  content: "/ month";
+  margin-left: 5px;
+  font-size: 15px;
+  font-weight: 300;
+}
+.etiquet-price .annual:after {
+  content: "/ year";
+  margin-left: 5px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.etiquet-price div {
+  position: absolute;
+  bottom: -23px;
+  right: 0px;
+  width: 0;
+  height: 0;
+  border-top: 13px solid var(--color-accents);
+  border-bottom: 10px solid transparent;
+  border-right: 13px solid transparent;
+  z-index: -6;
+}
+
+.benefits-list {
+  margin-top: 16px;
+}
+
+.benefits-list ul {
+  padding: 0;
+  font-size: 14px;
+}
+
+.benefits-list ul li {
+  color: #4d4d4d;
+  list-style: none;
+  margin-bottom: 0.2rem;
+  display: flex;
   align-items: center;
+  gap: 0.5rem;
+}
+
+.benefits-list ul li svg {
+  width: 0.9rem;
+  fill: currentColor;
+}
+
+.benefits-list ul li span {
+  font-weight: 300;
+}
+
+.plan button {
+  display: flex;
   justify-content: center;
-  height: 440px;
-  width: 200px;
-  border: 1px solid var(--color-text);
+  align-items: center;
+  background: var(--color-button-primary);
+  color: var(--color-text-light);
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.plan button:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
 }
 
 .lead {
   padding: 20px;
-  margin: 40px;
+  margin: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 50px;
-  background-color: var(--color-accents);
 }
 
 .lead h2 {
   font-size: var(--heading-size);
 }
 
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  min-height: 50px;
+  max-width: 150px;
+  padding: 0 1rem;
+  color: var(--color-text);
+  font-size: 15px;
+  border: 1px solid var(--color-text);
+  border-radius: 6px 0 0 6px;
+  background-color: transparent;
+}
+
+.button--submit {
+  min-height: 50px;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: var(--color-button-primary);
+  color: var(--color-text-light);
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button--submit:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
+}
+
+.input:focus,
+.input:focus-visible {
+  border-color: var(--color-secondary);
+  outline: none;
+}
+
+input [type="checkbox"] {
+  accent-color: var(--color-text);
+}
+input [type="checkbox"]:checked + label {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
 .faq {
   padding: 20px;
-  margin: 40px;
+  margin: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 50px;
-  background-color: var(--color-secondary);
+  gap: 10px;
 }
 
 .faq h2 {
+  margin-bottom: 40px;
   font-size: var(--heading-size);
 }
 
 .accordion {
   cursor: pointer;
   padding: 18px;
-  width: 100%;
-  text-align: left;
+  width: 50%;
+  text-align: center;
+  text-wrap: wrap;
   border: none;
   outline: none;
   transition: 0.4s;
-  background-color: transparent;
+  background-color: var(--color-button-primary);
+  columns: var(--color-text-light);
   border: 1px solid var(--color-text);
+  border-radius: 10px;
 }
 
 .active,
 .accordion:hover {
-  background-color: var(--color-button-secondary);
+  background-color: var(--color-button-primary);
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
 }
 
 .panel {
   padding: 0 18px;
-  background-color: var(--color-button-secondary);
   display: none;
   overflow: hidden;
 }
 
 footer {
   padding: 20px;
-  margin: 40px;
+  margin: 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
+  margin-bottom: 10px;
 }
 
 footer ul li img {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
@@ -357,17 +522,8 @@ footer ul li img:hover {
   transform: scale(1.2);
 }
 
-.float {
-  position: sticky;
-  bottom: 0;
+.contact ul li {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px;
-}
-
-.float img {
-  height: 40px;
-  width: 40px;
-  object-fit: contain;
+  gap: 5px;
+  align-items: center;
 }
